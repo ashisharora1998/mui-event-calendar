@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# MUI-EVENT-CALENDAR
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Developed By: Ashish Arora (GitId: ashisharora1998)
 
-## Available Scripts
+This is a Full year event calendar created with the help of MUI DatePicker.You can use this library easily by importing the component inside your project.
 
-In the project directory, you can run:
+There’s no such library available like this where you can easily pass dates to show events on a complete year calendar.
 
-### `npm start`
+Libraries that are required to be installed in your project:
+1. @emotion/react
+2. @emotion/styled
+3. @mui/material
+4. @mui/styles
+5. @mui/system
+6. @mui/x-date-pickers
+7. date-fns
+8. moment
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Steps to run this project:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### `Open the command prompt inside your folder`
 
-### `npm test`
+#### `Clone repository using git clone https://github.com/ashisharora1998/mui-event-calendar.git`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### `cd mui-event-calendar`
 
-### `npm run build`
+#### `npm install - - save`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### `npm start`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Make sure all the required libraries are installed.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Props list:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+##### selectBadgeBackgroundColor: 
+This prop sets a background color as a highlighter for your event badge to differentiate it from the other regular dates. All Event badges will have the same color.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+##### selectBadgeTextColor:  
+This prop sets a text color for the event badge. (Default color: black)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+##### badgeTextColor: 
+This prop sets a text color for the regular dates.
 
-## Learn More
+##### values: 
+Pass an array of formatted dates of events to highlight them on the calendar.ex:[“12-02-2022”,”12-05-2022”,”12-02-2022”,”11-23-2022”,”11-18-2022”].
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+##### onDateClick: 
+Pass a function to perform any event on click of any date. This prop will return 3 values e, day, and isSelected. You can also use the e to add any tooltip or popover on click of any date.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+##### year: 
+Pass the current year or any other you want to show on the calendar.
 
-### Code Splitting
+##### dateFormat: 
+Pass format for a date you are using to pass values. Ex: ”MM-DD-YYYY”.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+You can use this project or component as you want in your project by customizing it as per your theme.
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
