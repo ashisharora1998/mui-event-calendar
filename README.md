@@ -1,4 +1,4 @@
-# MUI-EVENT-CALENDAR
+# MUI-EVENT-LIBRARY
 
 #### Developed By: Ashish Arora (GitId: ashisharora1998)
 
@@ -6,25 +6,13 @@ This is a Full year event calendar created with the help of MUI DatePicker.You c
 
 There’s no such library available like this where you can easily pass dates to show events on a complete year calendar.
 
-Libraries that are required to be installed in your project:
-1. @emotion/react
-2. @emotion/styled
-3. @mui/material
-4. @mui/styles
-5. @mui/system
-6. @mui/x-date-pickers
-7. date-fns
-8. moment
+
 
 ### Steps to run this project:
 
-#### `Open the command prompt inside your folder`
+#### `Open the command prompt inside your project`
 
-#### `Clone repository using git clone https://github.com/ashisharora1998/mui-event-calendar.git`
-
-#### `cd mui-event-calendar`
-
-#### `npm install - - save`
+#### `npm install mui-event-library - - save`
 
 #### `npm start`
 
