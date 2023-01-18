@@ -1,6 +1,6 @@
 {
   "name": "mui-event-library",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "This is a Full year event calendar created with the help of MUI DatePicker.You can use this library easily by importing the component inside your project.",
   "main": "dist/index.cjs.js",
   "scripts": {

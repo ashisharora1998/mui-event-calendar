@@ -10,6 +10,7 @@ var moment = require('moment');
 var React = require('react');
 var styled = require('@emotion/styled');
 var StaticDatePicker = require('@mui/x-date-pickers/StaticDatePicker');
+var PropTypes = require('prop-types');
 
 /** @format */
 var StyledStaticDatePicker = styled(StaticDatePicker.StaticDatePicker)(function (_ref) {
@@ -50,14 +51,7 @@ var StyledStaticDatePicker = styled(StaticDatePicker.StaticDatePicker)(function 
   };
 });
 
-function Calendar(_ref) {
-  var selectBadgeBackgroundColor = _ref.selectBadgeBackgroundColor,
-    selectBadgeTextColor = _ref.selectBadgeTextColor,
-    badgeTextColor = _ref.badgeTextColor,
-    values = _ref.values,
-    onDateClick = _ref.onDateClick,
-    dateFormat = _ref.dateFormat,
-    year = _ref.year;
+function Calendar(props) {
   return /*#__PURE__*/React.createElement(system.Box, null, /*#__PURE__*/React.createElement(xDatePickers.LocalizationProvider, {
     dateAdapter: AdapterDateFns.AdapterDateFns
   }, /*#__PURE__*/React.createElement(system.Box, null, /*#__PURE__*/React.createElement(material.Grid, {
@@ -68,23 +62,24 @@ function Calendar(_ref) {
       md: 4,
       item: true
     }, /*#__PURE__*/React.createElement(StyledStaticDatePicker, {
-      value: new Date(year, index),
+      value: new Date(props.year, index),
       renderInput: function renderInput(params) {
       },
       renderDay: function renderDay(day, _value, DayComponentProps) {
-        var isSelected = !DayComponentProps.outsideCurrentMonth && (values === null || values === void 0 ? void 0 : values.indexOf(moment(day).format(dateFormat))) >= 0;
+        var _props$values;
+        var isSelected = !DayComponentProps.outsideCurrentMonth && ((_props$values = props.values) === null || _props$values === void 0 ? void 0 : _props$values.indexOf(moment(day).format(props.dateFormat))) >= 0;
         return /*#__PURE__*/React.createElement(material.Badge, {
           key: day.toString(),
           overlap: "circular",
           onClick: function onClick(e) {
-            return onDateClick(e, day, isSelected);
+            return props.onDateClick(e, day, isSelected);
           }
         }, /*#__PURE__*/React.createElement(xDatePickers.PickersDay, _extends({}, DayComponentProps, {
           sx: isSelected ? {
-            backgroundColor: "".concat(selectBadgeBackgroundColor, " !important"),
-            color: "".concat(selectBadgeTextColor, " !important")
+            backgroundColor: "".concat(props.selectBadgeBackgroundColor, " !important"),
+            color: "".concat(props.selectBadgeTextColor, " !important")
           } : {
-            color: "".concat(badgeTextColor, " !important"),
+            color: "".concat(props.badgeTextColor, " !important"),
             background: "none !important"
           }
         })));
@@ -92,6 +87,15 @@ function Calendar(_ref) {
     }));
   })))));
 }
+Calendar.propTypes = {
+  selectBadgeBackgroundColor: PropTypes.string.isRequired,
+  selectBadgeTextColor: PropTypes.string.isRequired,
+  badgeTextColor: PropTypes.string.isRequired,
+  values: PropTypes.array.isRequired,
+  onDateClick: PropTypes.func.isRequired,
+  dateFormat: PropTypes.string.isRequired,
+  year: PropTypes.string.isRequired
+};
 
 var returnLibrary = function returnLibrary() {
   return {

@@ -10,14 +10,23 @@ There’s no such library available like this where you can easily pass dates to
 
 ### Steps to run this project:
 
-#### `Open the command prompt inside your project`
+> Open the command prompt inside your project
 
-#### `npm install mui-event-library - - save`
+> npm install mui-event-library - - save
 
-#### `npm start`
+> npm start
 
 
-#### Make sure all the required libraries are installed.
+### Example:
+      <Calendar
+        year="2023"
+        values={["2023-12-18", "2023-11-18", "2023-01-12"]}
+        selectBadgeBackgroundColor={"black"}
+        selectBadgeTextColor={"white"}
+        badgeTextColor={"black"}
+        onDateClick={(e, day, isSelected) => console.log(e, day, isSelected)}
+        dateFormat={"YYYY-MM-DD"}
+      />
 
 
 ### Props list:
